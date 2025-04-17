@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class car{
+class Car{
     private String carID;
     private String brand;
     private String model;
     private double basePricePerDay;
     private boolean isAvailable;
 
-    public car(String carID,String brand,String model,double basePricePerDay){
+    public Car(String carID,String brand,String model,double basePricePerDay){
         this.carID=carID;
         this.brand=brand;
         this.basePricePerDay=basePricePerDay;
@@ -63,4 +63,29 @@ class Customer{
     public String getName(){
         return name;
     }
+}
+
+class Rental{
+    private Car car;
+    private Customer customer;
+    private int days;
+
+    public Rental (Car car,Customer customer,int days){
+        this.car=car;
+        this.customer=customer;
+        this.days=days;
+    }
+
+    public Car getCar(){
+        return car;
+    }
+
+    public Customer getCustomer(){
+        return customer;
+    }
+
+    public int getDays(){
+        return days;
+    }
+
 }
